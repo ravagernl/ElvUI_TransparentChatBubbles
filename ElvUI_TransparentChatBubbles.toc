@@ -2,7 +2,7 @@
 ## Title: ElvUI Transparent Chat Bubbles
 ## Notes: Changes bubbles so that they are transparent.
 ## Author: Affli @ RU-Howling Fjord
-## Version: 0.1
+## Version: 0.2
 ## RequiredDeps: ElvUI
 
 ElvUI_TransparentChatBubbles.lua
