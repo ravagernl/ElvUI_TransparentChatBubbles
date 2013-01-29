@@ -1,4 +1,4 @@
-## Interface: 50001
+## Interface: 50100
 ## Title: ElvUI Transparent Chat Bubbles
 ## Notes: Changes bubbles so that they are transparent.
 ## Author: Affli @ RU-Howling Fjord
