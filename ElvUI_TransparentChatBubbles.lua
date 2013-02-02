@@ -8,7 +8,6 @@
 if not ElvUI then return end
 local E, L, V, P, G, _ = unpack(ElvUI); --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB, Localize Underscore
 local M = E:GetModule('Misc')
-local pixelmode = E.PixelMode
 
 -- default setting
 P["chatbubbles"] = {
@@ -19,7 +18,7 @@ hooksecurefunc(M, 'SkinBubble', function(self,p)
 
 	local a = E.db.chatbubbles.alpha
 
-	if pixelmode then
+	if p.backdrop then
 		p.backdrop:SetTexture(.054,.054,.054,a)
 	end
 	p.backdrop2:SetTexture(.054,.054,.054,a)
@@ -43,7 +42,7 @@ local function TransBubbles(alpha, ...)
 		local frame = select(index, ...)
 
 		if frame.isBubblePowered then
-			if pixelmode then
+			if frame.backdrop then
 				frame.backdrop:SetTexture(.054,.054,.054, alpha)
 			end
 			frame.backdrop2:SetTexture(.054,.054,.054, alpha)
