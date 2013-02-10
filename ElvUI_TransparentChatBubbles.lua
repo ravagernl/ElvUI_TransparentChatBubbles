@@ -22,13 +22,17 @@ hooksecurefunc(M, 'SkinBubble', function(self,p)
 		p.backdrop:SetTexture(.054,.054,.054,a)
 	end
 	p.backdrop2:SetTexture(.054,.054,.054,a)
+	p.text:SetShadowColor(0, 0, 0, 1 - a)
+	p.text:SetShadowOffset(0, 0)
 
 	if a == 0 then
+		p.text:FontTemplate(nil, 14, 'THICKOUTLINE')
 		p.bordertop:Hide()
 		p.borderbottom:Hide()
 		p.borderleft:Hide()
 		p.borderright:Hide()
 	else
+		p.text:FontTemplate(nil, 14, 'OUTLINE')
 		p.bordertop:Show()
 		p.borderbottom:Show()
 		p.borderleft:Show()
@@ -46,12 +50,15 @@ local function TransBubbles(alpha, ...)
 				frame.backdrop:SetTexture(.054,.054,.054, alpha)
 			end
 			frame.backdrop2:SetTexture(.054,.054,.054, alpha)
+			frame.text:SetShadowColor(0, 0, 0, 1 - alpha)
 			if alpha == 0 then
+				frame.text:FontTemplate(nil, 14, 'THICKOUTLINE')
 				frame.bordertop:Hide()
 				frame.borderbottom:Hide()
 				frame.borderleft:Hide()
 				frame.borderright:Hide()
 			else
+				p.text:FontTemplate(nil, 14, 'OUTLINE')
 				frame.bordertop:Show()
 				frame.borderbottom:Show()
 				frame.borderleft:Show()
