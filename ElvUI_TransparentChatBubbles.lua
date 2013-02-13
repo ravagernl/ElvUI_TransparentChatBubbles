@@ -58,7 +58,7 @@ local function TransBubbles(alpha, ...)
 				frame.borderleft:Hide()
 				frame.borderright:Hide()
 			else
-				p.text:FontTemplate(nil, 14, 'OUTLINE')
+				frame.text:FontTemplate(nil, 14, 'OUTLINE')
 				frame.bordertop:Show()
 				frame.borderbottom:Show()
 				frame.borderleft:Show()
